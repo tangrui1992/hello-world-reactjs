@@ -4,8 +4,14 @@ import React from "react";
 //     return <h1> Howdy y'all!</h1>
 // }
 
-const Greet = () => <h1> Howdy y'all !</h1>
-export const YeeHaw = () => <h1>Yee Haw</h1>
-export const Bro = () => <h1>Hey bro!</h1>
-
-export default Greet;
+const Greet = (props) => {
+    console.log(props);
+    return (
+        <>
+        <h1> Howdy {props.name}, rando:{props.rando}!</h1>
+        <p>{props.children}</p>
+        </>
+        )
+    }
+    
+    export default Greet;

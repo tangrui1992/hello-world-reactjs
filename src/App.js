@@ -27,10 +27,11 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import WhateverIsDefaultExportFromGreetJs from './Components/Greet';
-import { YeeHaw } from './Components/Greet';
-import { Bro as Bruh } from './Components/Greet';
+import WhateverIsDefaultExportFromGreetJs from './Components/Greet0';
+import { YeeHaw } from './Components/Greet0';
+import { Bro as Bruh } from './Components/Greet0';
 import Welcome from './Components/Welcome';
+import Greet from './Components/Greet';
 
 
 class App extends Component{
@@ -38,15 +39,28 @@ class App extends Component{
   {
     return (
       <div className="App">
-        <WhateverIsDefaultExportFromGreetJs></WhateverIsDefaultExportFromGreetJs>
-        <YeeHaw></YeeHaw>
-        <Bruh></Bruh>
-        <Welcome/>
+      <WhateverIsDefaultExportFromGreetJs></WhateverIsDefaultExportFromGreetJs>
+      <YeeHaw></YeeHaw>
+      <Bruh></Bruh> 
+      <Welcome/>
+
+      <Greet name="Ray1" rando="WTF"/>
+      <Greet name="Ray2" rando="WTF">
+      Child Node Content
+      </Greet>
+      <Greet name="Ray3" rando="WTF">
+       <button>Click!!!</button>
+      </Greet>
+
+      <Welcome name="Ray1" rando="WTF1"/>
+      <Welcome name="Ray2" rando="WTF2"/>
+      <Welcome name="Ray3" rando="WTF3"/>
       </div>
-    );
+      );
+    }
+    
   }
-
-}
-
-export default App;
-
+  
+  export default App;
+  
+  
